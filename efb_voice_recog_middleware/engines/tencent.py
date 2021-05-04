@@ -54,7 +54,7 @@ class TencentSpeech(SpeechEngine):
                 audio = pydub.AudioSegment.from_file(path)\
                     .set_frame_rate(16000)\
                     .set_channels(1)
-                audio.export(f, format="wav", codec="s16le", bitrate='16k')
+                audio.export(f, format="wav", codec="pcm_s16le", bitrate='16k')
 
                 # f.seek(0)
 
