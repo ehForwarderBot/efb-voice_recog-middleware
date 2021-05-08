@@ -41,7 +41,7 @@ setup(
         "PyYaml",
         "pydub>=0.23.1",
         "tencentcloud-sdk-python",
-        "websocket_client"
+        "websocket_client >= 0.59.0"
     ],
     entry_points={
         'ehforwarderbot.middleware': 'catbaron.voice_recog = efb_voice_recog_middleware:VoiceRecogMiddleware'
