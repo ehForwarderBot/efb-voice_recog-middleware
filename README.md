@@ -44,7 +44,7 @@ pip install efb-voice_recog-middleware
 ### Enable
 
 Register to EFB
-Following [this document](https://ehforwarderbot.readthedocs.io/en/latest/getting-started.html) to edit the config file. The config file by default is `$HOME/.ehforwarderbot/profiles/default`. It should look like:
+Following [this document](https://ehforwarderbot.readthedocs.io/en/latest/getting-started.html) to edit the config file. The config file by default is `$HOME/.ehforwarderbot/profiles/default/config.yaml`. It should look like:
 
 ```yaml
 master_channel: foo.demo_master
@@ -60,7 +60,7 @@ You only need to add the last line to your config file.
 
 ### Configure the middleware
 
-The config file by default is `$HOME/.ehforwarderbot/profiles/default/catbaron.voice_recog`.
+The config file by default is `$HOME/.ehforwarderbot/profiles/default/catbaron.voice_recog/config.yaml`.
 Please create the config file if thers is not one.  Edit it as:
 
 ```yaml
