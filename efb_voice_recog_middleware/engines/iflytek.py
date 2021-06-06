@@ -27,7 +27,7 @@ class IFlyTekSpeech(SpeechEngine):
     keys = None
     access_token = None
     engine_name = "IFlyTek"
-    lang_list = ["zh_cn", "en_us", "zh", "en"]
+    lang_list = ["zh_cn", "en_us", "zh", "en", "zh-x-sichuan"]
 
     def __init__(self, keys: Dict[str, str]):
         """
@@ -42,7 +42,8 @@ class IFlyTekSpeech(SpeechEngine):
 
         languages = {
             "zh": "zh_cn",
-            "en": "en_us"
+            "en": "en_us",
+            "zh-x-sichuan": "zh-x-sichuan"
         }
 
         def __init__(self, keys: Dict[str, str], file, lang):
@@ -132,6 +133,13 @@ class IFlyTekSpeech(SpeechEngine):
                     "accent": "mandarin",
                     "vad_eos": 10000
                     }
+            elif lang == "zh-x-sichuan":
+                return {
+                    "domain": "iat",
+                    "language": "zh_cn",
+                    "accent": "cn_lmz",
+                    "vad_eos": 10000
+                    }  
             else:
                 return {"domain": "iat", "language": lang, "vad_eos": 10000}
 
