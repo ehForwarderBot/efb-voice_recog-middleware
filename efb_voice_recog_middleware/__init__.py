@@ -65,7 +65,7 @@ class VoiceRecogMiddleware(Middleware):
         if not config_path.exists():
             raise FileNotFoundError('The configure file does not exist!')
         with config_path.open('r') as f:
-            d: Dict[str, Any] = yaml.load(f)
+            d: Dict[str, Any] = yaml.load(f, Loader=yaml.SafeLoader)
             if not d:
                 raise RuntimeError('Load configure file failed!')
                 return
